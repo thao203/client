@@ -1,19 +1,15 @@
-import classNames from 'classnames/bind';
 import { useEffect, useState } from 'react';
 import { Box, Typography, Button, Modal } from '@mui/material';
-import styles from '../../Page/HomePage/Layouts/Main/DetaiBook/detailbook.module.scss';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap-icons/font/bootstrap-icons.css';
 import request from '../../config/Connect';
 
-const cx = classNames.bind(styles);
-
+// eslint-disable-next-line react/prop-types
 const DetailBookModal = ({ open, onClose, masach }) => {
   // Nhận masach từ props
   const [book, setBook] = useState(null);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
-  const [showRequestModal, setShowRequestModal] = useState(false);
 
   // Hàm định dạng ngày
   const formatDate = (dateString) => {

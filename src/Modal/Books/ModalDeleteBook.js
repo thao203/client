@@ -5,6 +5,7 @@ import request from '../../config/Connect';
 
 import 'react-toastify/dist/ReactToastify.css';
 
+// eslint-disable-next-line react/prop-types
 function ModalDeleteBook({ showModalDeleteBook, setShowModalDeleteBook, masach }) {
   const handleClose = () => setShowModalDeleteBook(false);
 
