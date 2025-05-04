@@ -8,12 +8,12 @@ import 'react-toastify/dist/ReactToastify.css';
 import { Modal, Button } from 'react-bootstrap';
 import Select from 'react-select';
 import DatePicker from 'react-datepicker';
+import { Label } from '@mui/icons-material';
 import ModalAddHandleBook from '../../../../Modal/ExtenBooks/ModalAddHandleBook';
 import useDebounce from '../../../../customHook/useDebounce';
 import styles from './HandleBooks.module.scss';
 import 'react-datepicker/dist/react-datepicker.css';
 import request from '../../../../config/Connect';
-import { Label } from '@mui/icons-material';
 
 const cx = classNames.bind(styles);
 
@@ -43,6 +43,7 @@ function HandleBook() {
     if (!dateString) return 'N/A';
     try {
       const date = new Date(dateString);
+      // eslint-disable-next-line no-restricted-globals
       if (isNaN(date.getTime())) return 'N/A';
       const day = String(date.getDate()).padStart(2, '0');
       const month = String(date.getMonth() + 1).padStart(2, '0');

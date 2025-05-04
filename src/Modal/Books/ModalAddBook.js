@@ -72,7 +72,7 @@ function ModalAddBook({ showModalAddBook, setShowModalAddBook }) {
   // Filter locations based on search queries
   useEffect(() => {
     if (locations.length > 0) {
-      const filtered = locationSearchQueries.map((query, index) =>
+      const filtered = locationSearchQueries.map((query) =>
         query
           ? locations.filter(
               (location) => location && location.mavitri && location.mavitri.toLowerCase().includes(query.toLowerCase())

@@ -143,9 +143,11 @@ const ModalSugestionBooks = ({ show, handleClose }) => {
                           </Typography>
                           <Typography
                             variant="body2"
+                            // eslint-disable-next-line no-nested-ternary
                             color={isOverdue ? 'error.main' : daysUntilDue === 0 ? 'error.main' : 'warning.main'}
                             fontWeight="bold"
                           >
+                            {/* eslint-disable-next-line no-nested-ternary */}
                             {isOverdue
                               ? `Đã quá hạn ${Math.abs(daysUntilDue)} ngày`
                               : daysUntilDue === 0
