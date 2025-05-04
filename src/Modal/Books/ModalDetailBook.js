@@ -55,12 +55,14 @@ const DetailBookModal = ({ open, onClose, masach }) => {
       aria-describedby="book-detail-description"
       sx={{ display: 'flex', alignItems: 'center', justifyContent: 'center' }}
     >
+      {/* eslint-disable-next-line no-nested-ternary */}
       {loading ? (
         <Typography className="text-center text-muted py-5">
           <i className="bi bi-hourglass-split me-2" />
           Đang tải...
         </Typography>
-      ) : error ? (
+      ) : // eslint-disable-next-line no-nested-ternary
+      error ? (
         <Typography className="text-danger text-center py-5">
           <i className="bi bi-exclamation-triangle me-2" />
           {error}

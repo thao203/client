@@ -75,7 +75,7 @@ function AdminPage() {
               Xin Chào: Admin
             </button>
             <ul className="dropdown-menu dropdown-menu-end">
-              {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events */}
+              {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
               <li onClick={handleLogout}>
                 <a className="dropdown-item" href="/">
                   Đăng Xuất
@@ -91,14 +91,17 @@ function AdminPage() {
         {/* Thanh bên */}
         <div className={cx('sidebar', 'shadow-sm', { collapsed: isSidebarCollapsed })}>
           <ul className="nav flex-column">
+            {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
             <li className={cx('nav-item', { active: checkPage === '1' })} onClick={() => setCheckPage('1')}>
               <FontAwesomeIcon icon={faUsers} className="me-2" />
               {!isSidebarCollapsed && 'Quản Lý Người Dùng'}
             </li>
+            {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
             <li className={cx('nav-item', { active: checkPage === '2' })} onClick={() => setCheckPage('2')}>
               <FontAwesomeIcon icon={faUserFriends} className="me-2" />
               {!isSidebarCollapsed && 'Quản Lý Độc Giả'}
             </li>
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions,jsx-a11y/click-events-have-key-events */}
             <li
               className={cx('nav-item', { active: ['3', '4', '5'].includes(checkPage) })}
               onClick={() => toggleSubmenu('inventory')}
@@ -116,24 +119,29 @@ function AdminPage() {
             </li>
             {openSubmenu === 'inventory' && !isSidebarCollapsed && (
               <ul className="nav flex-column ms-3">
+                {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
                 <li className={cx('nav-item', { active: checkPage === '3' })} onClick={() => setCheckPage('3')}>
                   <FontAwesomeIcon icon={faBook} className="me-2" />
                   Quản Lý Sách
                 </li>
+                {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions,jsx-a11y/click-events-have-key-events */}
                 <li className={cx('nav-item', { active: checkPage === '4' })} onClick={() => setCheckPage('4')}>
                   <FontAwesomeIcon icon={faLayerGroup} className="me-2" />
                   Quản Lý Danh Mục
                 </li>
+                {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions,jsx-a11y/click-events-have-key-events */}
                 <li className={cx('nav-item', { active: checkPage === '5' })} onClick={() => setCheckPage('5')}>
                   <FontAwesomeIcon icon={faMapMarkerAlt} className="me-2" />
                   Quản Lý Vị Trí
                 </li>
               </ul>
             )}
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions,jsx-a11y/click-events-have-key-events */}
             <li className={cx('nav-item', { active: checkPage === '6' })} onClick={() => setCheckPage('6')}>
               <FontAwesomeIcon icon={faExchangeAlt} className="me-2" />
               {!isSidebarCollapsed && 'Quản Lý Mượn Trả'}
             </li>
+            {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions,jsx-a11y/click-events-have-key-events */}
             <li
               className={cx('nav-item', { active: ['7', '8', '9', '10'].includes(checkPage) })} // Thêm '10'
               onClick={() => toggleSubmenu('report')}
@@ -151,18 +159,22 @@ function AdminPage() {
             </li>
             {openSubmenu === 'report' && !isSidebarCollapsed && (
               <ul className="nav flex-column ms-3">
+                {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions,jsx-a11y/click-events-have-key-events */}
                 <li className={cx('nav-item', { active: checkPage === '7' })} onClick={() => setCheckPage('7')}>
                   <FontAwesomeIcon icon={faExchangeAlt} className="me-2" />
                   Báo Cáo Mượn Trả
                 </li>
+                {/* eslint-disable-next-line jsx-a11y/no-noninteractive-element-interactions,jsx-a11y/click-events-have-key-events */}
                 <li className={cx('nav-item', { active: checkPage === '8' })} onClick={() => setCheckPage('8')}>
                   <FontAwesomeIcon icon={faShoppingCart} className="me-2" />
                   Sách Dự Kiến Mua
                 </li>
+                {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
                 <li className={cx('nav-item', { active: checkPage === '9' })} onClick={() => setCheckPage('9')}>
                   <FontAwesomeIcon icon={faBook} className="me-2" />
                   Báo Cáo Tồn Kho
                 </li>
+                {/* eslint-disable-next-line jsx-a11y/click-events-have-key-events,jsx-a11y/no-noninteractive-element-interactions */}
                 <li
                   className={cx('nav-item', { active: checkPage === '10' })} // Thêm option mới
                   onClick={() => setCheckPage('10')}

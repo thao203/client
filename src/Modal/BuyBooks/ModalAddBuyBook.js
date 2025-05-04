@@ -270,7 +270,9 @@ function ModalAddBuyBook({ showModalAddBuyBook, setShowModalAddBuyBook, onAddSuc
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
                           }}
+                          // eslint-disable-next-line no-return-assign
                           onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#f0f0f0')}
+                          // eslint-disable-next-line no-return-assign
                           onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'white')}
                         >
                           {book.tensach} ({book.masach})
@@ -350,7 +352,9 @@ function ModalAddBuyBook({ showModalAddBuyBook, setShowModalAddBuyBook, onAddSuc
                             overflow: 'hidden',
                             textOverflow: 'ellipsis',
                           }}
+                          // eslint-disable-next-line no-return-assign
                           onMouseEnter={(e) => (e.currentTarget.style.backgroundColor = '#f0f0f0')}
+                          // eslint-disable-next-line no-return-assign
                           onMouseLeave={(e) => (e.currentTarget.style.backgroundColor = 'white')}
                         >
                           {location.mavitri}

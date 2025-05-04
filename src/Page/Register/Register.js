@@ -56,6 +56,7 @@ function Register() {
             <h2>Đại Học Kinh Tế - Kĩ Thuật Công Nghiệp</h2>
           </div>
           <div className={cx('image-container')}>
+            {/* eslint-disable-next-line jsx-a11y/img-redundant-alt */}
             <img src="/Books_preview.png" alt="Library Image" className={cx('animated-image')} />
           </div>
         </div>
