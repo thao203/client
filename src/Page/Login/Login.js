@@ -32,10 +32,9 @@ function Login() {
       const data = { masinhvien, password };
       const res = await request.post('api/login', data);
       if (res.data.token) {
-        const { hostname } = window.location;
         const cookieOptions = {
           path: '/',
-          domain: hostname === 'localhost' ? undefined : hostname,
+          domain: 'server-plum-xi.vercel.app',
           expires: new Date(Date.now() + 7 * 24 * 60 * 60 * 1000),
         };
 
@@ -56,7 +55,7 @@ function Login() {
         localStorage.removeItem('password');
       }
     } catch (error) {
-      toast.error(error.response.data.message);
+      toast.error(error.response?.data?.message || 'Đăng nhập thất bại!');
     }
   };
 
